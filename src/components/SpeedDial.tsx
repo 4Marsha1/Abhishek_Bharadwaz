@@ -18,7 +18,7 @@ const ACTIONS = [
 	{ icon: <TwitterIcon />, name: "Twitter" },
 ];
 
-const LINKS = [
+export const LINKS = [
 	"https://github.com/4Marsha1",
 	"https://www.linkedin.com/in/abhishek-bharadwaz/",
 	"https://www.instagram.com/bharadwaz_abhishek/",

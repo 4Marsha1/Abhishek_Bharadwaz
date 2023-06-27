@@ -1,8 +1,8 @@
-import merlinLogo from "./assets/experiences/merlin__logo.jpeg";
-import houseofxLogo from "./assets/experiences/houseofx__logo.jpeg";
-import springLogo from "./assets/experiences/spring__logo.jpeg";
-import ethanLogo from "./assets/experiences/ethan__logo.jpeg";
-import zoukeLogo from "./assets/experiences/zouke__logo.jpeg";
+import merlinLogo from "../assets/experiences/merlin__logo.jpeg";
+import houseofxLogo from "../assets/experiences/houseofx__logo.jpeg";
+import springLogo from "../assets/experiences/spring__logo.jpeg";
+import ethanLogo from "../assets/experiences/ethan__logo.jpeg";
+import zoukeLogo from "../assets/experiences/zouke__logo.jpeg";
 
 export const ExperienceData = [
 	{

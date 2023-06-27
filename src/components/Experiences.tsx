@@ -7,7 +7,7 @@ import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import { Avatar } from "@mui/material";
-import { ExperienceData } from "../data";
+import { ExperienceData } from "../Data/ExperienceData";
 
 export const Experiences: FunctionComponent = (): ReactElement => {
 	return (
@@ -19,7 +19,7 @@ export const Experiences: FunctionComponent = (): ReactElement => {
 			<div className="flex justify-start z-2">
 				<Timeline position="alternate">
 					{ExperienceData.map((item) => (
-						<TimelineItem>
+						<TimelineItem key={item.id}>
 							<TimelineOppositeContent sx={{ m: "auto 0" }}>
 								<span className="text-base text-gray-500 font-semibold">
 									{item.date} · {item.duration}

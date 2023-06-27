@@ -7,7 +7,7 @@ export const Navbar: FunctionComponent = (): ReactElement => {
 	const [tab, setTab] = useState(0);
 
 	return (
-		<div className="fixed top-0 left-0 flex justify-evenly items-center w-screen mt-8 z-20">
+		<div className="fixed top-0 left-0 flex justify-around items-center w-screen mt-8 z-20">
 			<Box className="w-16 h-16 bg-white flex justify-center items-center rounded-full shadow-slate-400  shadow-xl">
 				<Tooltip
 					TransitionComponent={Slide}
@@ -26,7 +26,7 @@ export const Navbar: FunctionComponent = (): ReactElement => {
 					/>
 				</Tooltip>
 			</Box>
-			<Box className="bg-lightGrey rounded-full px-2 py-2 flex items-center gap-6 shadow-xl shadow-slate-300  border border-[#eeeeee]">
+			<Box className="bg-lightGrey rounded-full px-2 py-2 flex items-center gap-6 shadow-xl shadow-slate-400 border border-[#eeeeee]">
 				<a
 					href="#landing"
 					onClick={() => setTab(0)}
@@ -60,41 +60,32 @@ export const Navbar: FunctionComponent = (): ReactElement => {
 				>
 					Projects
 				</a>
-				<a
-					href="#certificates"
-					onClick={() => setTab(3)}
-					className={`py-2 px-4  ${
-						tab === 3
-							? "bg-white shadow-sm shadow-slate-200 border-[#eeeeee] border text-gray-800"
-							: "text-gray-500"
-					} text-lg rounded-full font-satoshi font-semibold cursor-pointer`}
-				>
-					Certificates
-				</a>
 			</Box>
-			<Box className="w-12 h-12 bg-white flex justify-center items-center rounded-full shadow-slate-400  shadow-xl">
-				<Tooltip
-					TransitionComponent={Grow}
-					TransitionProps={{ timeout: 500 }}
-					title="Let's Connect"
-					arrow
-				>
-					<Avatar
-						variant="circular"
-						sx={{
-							width: "48px",
-							height: "48px",
-							cursor: "pointer",
-							background: "transparent",
-						}}
+			<a href="#connect">
+				<Box className="w-12 h-12 bg-white flex justify-center items-center rounded-full shadow-slate-400  shadow-xl">
+					<Tooltip
+						TransitionComponent={Grow}
+						TransitionProps={{ timeout: 500 }}
+						title="Let's Connect"
+						arrow
 					>
-						<ForwardToInboxRounded
-							fontSize="medium"
-							className="text-gray-700"
-						/>
-					</Avatar>
-				</Tooltip>
-			</Box>
+						<Avatar
+							variant="circular"
+							sx={{
+								width: "48px",
+								height: "48px",
+								cursor: "pointer",
+								background: "transparent",
+							}}
+						>
+							<ForwardToInboxRounded
+								fontSize="medium"
+								className="text-gray-700"
+							/>
+						</Avatar>
+					</Tooltip>
+				</Box>
+			</a>
 		</div>
 	);
 };
