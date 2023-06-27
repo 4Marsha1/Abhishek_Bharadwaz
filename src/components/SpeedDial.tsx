@@ -33,7 +33,7 @@ export const SpeedDialMenu: React.FunctionComponent =
 		return (
 			<Box
 				sx={{ height: 320, transform: "translateZ(0px)", flexGrow: 1 }}
-				className="fixed bottom-16 left-10"
+				className="fixed bottom-16 left-10 z-200"
 			>
 				<SpeedDial
 					open={open}

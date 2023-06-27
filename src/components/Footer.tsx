@@ -9,7 +9,7 @@ import { LINKS } from "./SpeedDial";
 
 const Footer = () => {
 	return (
-		<div className="py-16 gap-4 w-full bg-gray-300 mt-40 font-satoshi flex flex-col justify-center items-center">
+		<div className="py-8 md:py-16 gap-4 w-full bg-gray-300 mt-10 md:mt-40 font-satoshi flex flex-col justify-center items-center">
 			<div className="flex gap-4">
 				<IconButton onClick={() => window.open(LINKS[0])}>
 					<GitHubIcon fontSize="large" />
@@ -27,7 +27,7 @@ const Footer = () => {
 					<TwitterIcon fontSize="large" />
 				</IconButton>
 			</div>
-			<span className="text-base font-semibold">
+			<span className="text-xs md:text-base font-semibold">
 				Copyright © 2023 Abhishek Bharadwaz. All rights reserved.
 			</span>
 		</div>
