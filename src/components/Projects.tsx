@@ -1,6 +1,7 @@
 import React, { FunctionComponent, ReactElement } from "react";
 import { ProjectsData } from "../Data/ProjectsData";
-import { OpenInBrowser } from "@mui/icons-material";
+import { ArrowCircleRightRounded, OpenInNewRounded } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 
 type TProps = {
 	isMobile: boolean;
@@ -58,7 +59,7 @@ export const Projects: FunctionComponent<TProps> = ({
 								className="border flex justify-center items-center gap-2 border-white shadow-xl rounded-lg text-xs md:text-base font-extrabold text-white w-fit py-1 px-2 md:py-2 md:px-4 md:my-4
                                 transition transform ease-in delay-50 hover:scale-105 hover:text-orange hover:bg-white "
 							>
-								{project.link.text} <OpenInBrowser />
+								{project.link.text} <OpenInNewRounded />
 							</button>
 						</div>
 						{!isMobile && (
@@ -75,6 +76,13 @@ export const Projects: FunctionComponent<TProps> = ({
 					</div>
 				))}
 			</div>
+			<Link
+				to="/projects"
+				className="text-gray-700 gap-4 tracking-wide font-bold text-lg md:text-2xl flex items-center justify-center hover:underline mt-10 hover:decoration-orange hover:underline-offset-8"
+			>
+				View all projects
+				<ArrowCircleRightRounded fontSize="large" />
+			</Link>
 		</div>
 	);
 };
