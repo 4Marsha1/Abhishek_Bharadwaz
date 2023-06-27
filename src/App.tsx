@@ -14,6 +14,7 @@ import Footer from "./components/Footer";
 import Skills from "./components/Skills";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AllProjects from "./components/AllProjects";
+import { ToastStateProvider } from "./utils";
 
 export const App: FunctionComponent = (): ReactElement => {
 	const [isMobile, setIsMobile] = useState(false);
@@ -26,35 +27,36 @@ export const App: FunctionComponent = (): ReactElement => {
 	}, []);
 	return (
 		<div className="flex flex-col bg-lightGrey">
-			<Navbar isMobile={isMobile} />
-			<BrowserRouter>
-				<Routes>
-					<Route
-						path="/"
-						element={
-							<>
-								<SpeedDialMenu />
-								<Landing />
-								<Experiences isMobile={isMobile} />
-								<Skills isMobile={isMobile} />
-								<Projects isMobile={isMobile} />
-								<Connect isMobile={isMobile} />
-							</>
-						}
-					/>
+			<ToastStateProvider>
+				<Navbar isMobile={isMobile} />
+				<BrowserRouter>
+					<Routes>
+						<Route
+							path="/"
+							element={
+								<>
+									<SpeedDialMenu />
+									<Landing />
+									<Experiences isMobile={isMobile} />
+									<Skills isMobile={isMobile} />
+									<Projects isMobile={isMobile} />
+									<Connect isMobile={isMobile} />
+								</>
+							}
+						/>
 
-					<Route
-						path="/projects"
-						element={
-							<>
-								<AllProjects />
-							</>
-						}
-					/>
-				</Routes>
-			</BrowserRouter>
-
-			<Footer />
+						<Route
+							path="/projects"
+							element={
+								<>
+									<AllProjects />
+								</>
+							}
+						/>
+					</Routes>
+				</BrowserRouter>
+				<Footer />
+			</ToastStateProvider>
 		</div>
 	);
 };
