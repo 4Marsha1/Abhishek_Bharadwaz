@@ -28,9 +28,16 @@ export const Experiences: FunctionComponent<TProps> = ({
 						<div className="flex flex-col gap-4">
 							{ExperienceData.map((item) => (
 								<div className="flex flex-col hover:bg-white transition ease-in delay-50 bg-[#eceff1] px-4 py-4 border border-[#ece7e7] rounded-2xl shadow-xl shadow-slate-300">
-									<span className="text-xl font-semibold text-gray-800 tracking-wider text-left">
-										{item.title}
-									</span>
+									<div className="flex justify-between items-end">
+										<span className="text-lg font-semibold text-gray-800 tracking-wider text-left">
+											{item.title}
+										</span>
+										<img
+											src={item.logo}
+											alt="logo"
+											className="w-[40px] rounded-full shadow-lg"
+										/>
+									</div>
 									<span className="text-base font-semibold text-gray-900 mb-2 tracking-wide text-left">
 										<span className="text-orange">{item.company}</span> ·{" "}
 										{item.employment}

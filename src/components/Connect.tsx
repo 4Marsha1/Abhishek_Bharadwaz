@@ -67,8 +67,8 @@ const Connect: FunctionComponent<TProps> = ({ isMobile }): ReactElement => {
 			<span className="text-gray-700 tracking-widest font-extrabold text-2xl md:text-4xl text-center">
 				Let's Connect
 			</span>
-			<div className="border border-[#eeeeee] rounded-lg shadow-lg shadow-slate-400 flex flex-col md:flex-row items-stretch">
-				<div className="bg-gray-300 w-full md:w-[400px] flex flex-col items-start gap-2 px-2 md:px-12 py-4">
+			<div className="border border-[#eeeeee] rounded-lg shadow-lg shadow-slate-400 flex flex-col md:flex-row items-stretch w-full">
+				<div className="bg-gray-300 w-full md:w-2/5 flex flex-col items-start gap-2 px-2 md:px-12 py-4">
 					<IconButton className="flex gap-2 text-black">
 						<MailOutlineRounded fontSize="large" color="inherit" />
 						<span className="text-sm md:text-base text-black font-semibold tracking-wider">
@@ -127,7 +127,7 @@ const Connect: FunctionComponent<TProps> = ({ isMobile }): ReactElement => {
 						</span>
 					</IconButton>
 				</div>
-				<div className="bg-white w-full md:w-[600px] flex flex-col items-start gap-4 px-4 md:px-12 py-8">
+				<div className="bg-white w-full md:w-3/5 flex flex-col items-start gap-4 px-4 md:px-12 py-8">
 					<span className="text-base md:text-xl font-semibold tracking-widest">
 						Name
 					</span>
